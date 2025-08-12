@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Wellness Support</h2>
+<ul>
+  {% for r in resources %}
+  <li class="mb-2 p-2 bg-white rounded"><a href="{{ r.link }}">{{ r.title }}</a> - {{ r.description }}</li>
+  {% else %}
+  <li>No resources yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

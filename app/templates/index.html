@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="text-center py-12">
+  <h1 class="text-4xl font-extrabold">Project South Africa: Powered by iKhaya AI</h1>
+  <p class="mt-4 text-lg">Empowering communities with digital skills, health education and wellness support.</p>
+</header>
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="p-4 bg-white rounded shadow">
+    <h2 class="font-bold">Digital Literacy</h2>
+    <ul>
+      {% for c in courses %}
+      <li class="mt-2">{{ c.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="p-4 bg-white rounded shadow">
+    <h2 class="font-bold">Health Tools</h2>
+    <p>Verified tips and simple symptom checker.</p>
+  </div>
+  <div class="p-4 bg-white rounded shadow">
+    <h2 class="font-bold">Community</h2>
+    <p>Peer support and local opportunities.</p>
+  </div>
+</section>
+{% endblock %}

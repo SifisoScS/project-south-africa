@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Health Tools</h2>
+<p>Simple symptom checker (mock) and verified articles.</p>
+<ul>
+  {% for a in articles %}
+  <li class="mb-2 p-2 bg-white rounded">{{ a.title }} - {% if a.verified %}Verified{% else %}Unverified{% endif %}</li>
+  {% else %}
+  <li>No articles yet.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
